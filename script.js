@@ -72,24 +72,21 @@ class Book {
     }
 }
 //store books into library array 
+submit.addEventListener('click', storeBook)
 function storeBook(e) {
     if (title.value && author.value == '') {
         return
     }
     e.preventDefault();
     library[bookCount] = new Book(title.value, author.value, pages.value, readCheck.checked)
-    
-    //create card
+
+    //create card and select all new dom elements 
     createCard()
-    bookCount++
     removePopup()
     getDomElements()
-   
-
-
+    bookCount++
 }
 
-submit.addEventListener('click', storeBook)
 
 //create card function
 function createCard() {
@@ -123,6 +120,7 @@ function getDomElements() {
     });
 }
 
+//remove overlay and set form values to default 
 function removePopup() {
     title.value = ''
     author.value = ''
