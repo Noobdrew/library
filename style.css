@@ -85,15 +85,15 @@ main {
     font-weight: bold;
 }
 
-.card .read {
+.card .true {
     background-color: #9FFF9C;
 }
 
-.card .read::before {
+.card .true::before {
     content: 'Read';
 }
 
-.card .read:hover {
+.card .true:hover {
     background-color: #7cda78;
 }
 
